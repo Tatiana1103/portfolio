@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>registration form</title>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+  <form action="">
+    <fieldset>
+      <legend>Коротко о себе:</legend>
+      <p><label for="name">Имя</label>
+        <input type="text" id="name" style="text-transform: capitalize" [A-z] maxlength="20" required autofocus></p>
+        <p><label for="pass">Пароль</label>
+          <input type="password" id="pass" minlength="6" required></p>
+          <p> <label for="age">Возраст</label>
+            <input type="number"id="Age" min="1" max="100" required></p>
+            <p><label for="pol">Пол</label>
+              <select name="pol" id="pol" required>
+                <option value="">Указать</option>
+                <option value="1">Мужской</option>
+                <option value="2">Женский</option>
+              </select>
+            </p>
+            <p><label for="textarea">Ваш комментарий</label>
+              <p><textarea name="comment" id="comment" cols="48" rows="8"> </textarea>
+              </p>
+              <p><input name="submit" type="submit" id="submit" value="Отправить" />
+              </p>
+            </fieldset>
+          </form>
+        </body>
+        </html>
