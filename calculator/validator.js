@@ -14,7 +14,7 @@ function gen(){
   }
 }
 
-function plus () {
+function plus (operator) {
   var num1, num2, num3;
   result = document.getElementById('rez').value;
 
@@ -24,7 +24,10 @@ function plus () {
   num2 = document.getElementById('data').value;
   num2 = parseInt(num2);
 
-  num3 = num1+num2;
+	switch(operator){
+		case "+": num3 = num1+num2; break;
+	}
+  
 
   if (result == num3){
     alert ("result true");
@@ -81,7 +84,7 @@ var
   f1 = document.getElementById('pluss').checked;
   f2 = document.getElementById('minuss').checked;
   if(f1){
-    plus();
+    plus("+");
   }else if(f2){
     min ();
   }else {
