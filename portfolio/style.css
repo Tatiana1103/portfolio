@@ -1,0 +1,85 @@
+body {
+	background-color: white ;
+	margin: 0px;
+    padding: 0px;
+	}
+	@font-face {
+		font-family:Pangolin-Regular;
+	src: url("fonts/Pangolin-Regular.ttf");
+}
+
+header{	border: solid black 2px;
+	margin: 0px;
+    padding: 0px;
+}
+	section {
+	border: solid black 2px;
+	margin: inherit;
+	    background-image: url("images/picture 1.jpg");
+			background-size: 105%;
+}
+
+
+nav.main-menu {
+	text-align:right;
+	float: right;
+	margin-top: 30px;
+width: 100%;
+}
+
+nav.main-menu ul {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+}
+
+nav.main-menu li {
+	float: right;
+	display: block;
+	margin-left: 80px;
+	letter-spacing: 2px;
+}
+
+nav.main-menu a {
+	font-family:sans-serif;
+	text-decoration: none;
+	font-size: 110%;
+	color: grey;
+}
+
+	h1 {
+		display:block;
+		color: #7e7e7e;
+		font: 50px 'Pangolin-Regular';
+		background: url(../images/bg.png);
+		margin: 10%;
+		padding: 10px;
+text-align: right;}
+
+
+
+
+ form {text-align:center;}
+
+ fieldset {
+ border: 1px solid #006400;
+ width: 50%;
+ background: #9ACD32;
+ opacity: 0.7;
+ padding: 3px;
+
+ }
+ fieldset legend {
+   border: 1px solid #006400;
+   font-size: 24pt;
+   color: SaddleBrown;
+   background-color: #F0E68C;
+ padding: 6px;
+ font-weight: bold;
+ }
+<! input[type="submit"]{
+   width:100px;
+   height:30px;
+   background:#556B2F;
+   color:#fff;
+   border:0 none;>
