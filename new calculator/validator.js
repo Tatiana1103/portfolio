@@ -1,86 +1,45 @@
 var result;
 var result2;
 function randomInteger() {
-  var min = document.getElementById('short_link').value;
-  var max = document.getElementById('data').value;
-  var f1 = document.getElementById('pluss').checked;
-  var f2 = document.getElementById('minuss').checked;
-  var f3 = document.getElementById('multt').checked;
+  var min = Number(document.getElementById('short_link').value);
+  var max = Number(document.getElementById('data').value);
   
-  var  rand = Math.floor(Math.random() * (max - min+1) + min);
-  var  rand2 = Math.floor(Math.random() * (max - min+1) + min);
-  //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+  result = Math.floor(Math.random() * (max - min)) + min;
+  result2 = Math.floor(Math.random() * (max - min)) + min;
+   
+  document.getElementById('rez').value = result+ " " + getSign() + " " +result2;
   
- 
-if(f1){
-    document.getElementById('rez').value = rand+ "+" + rand2;
-  }else if(f2){
-    document.getElementById('rez').value = rand+ "-" + rand2;
-  }else if (f3) {
-    document.getElementById('rez').value = rand+ "*" + rand2;
+  
+}
+
+function getSign(){
+  
+if(document.getElementById('pluss').checked)
+    return "+";
+if(document.getElementById('minuss').checked)
+	return "-";
+if (document.getElementById('multt').checked)
+    return "*";
   }
-  
-  result = rand;
-  result2 = rand2;
 
-  
-  
+
+function check2 (firstNumber, secondNumber, sign) {
+	var userAnswer = Number(document.getElementById('rez2').value);
+	
+	switch(sign){
+		case "*": return userAnswer === (firstNumber*secondNumber);  break;
+		case "+": return userAnswer === (firstNumber+secondNumber); break;
+		case "-": return userAnswer === (firstNumber-secondNumber); break;
+	}
+	
 }
 
-
-function plus() {
-  var num1 = window.result;
-  var num2 = window.result2;
-  var res = document.getElementById('rez2').value;
-  
-  if (res == (num1+num2)){
-    alert ("result true");
-  } else {
-    alert ("result false");
-  }
- 
-}
-
-function min () {
-  var num1 = window.result;
-  var num2 = window.result2;
-  var res = document.getElementById('rez2').value;
-
-if (num1 < num2){
-  alert ("error");
-} else {
-  if (res == (num1-num2)){
-    alert ("result true");
-  } else {
-    alert ("result false");
-  }
-}
-}
-
-
-
-function mult () {
-var num1 = window.result;
-  var num2 = window.result2;
-  var res = document.getElementById('rez2').value;
-  
-  if (res == (num1*num2)){
-    alert ("result true");
-  } else {
-    alert ("result false");
-  }
- 
-}
 
 function check () {
-  var f1 = document.getElementById('pluss').checked;
-  var f2 = document.getElementById('minuss').checked;
-  var f3 = document.getElementById('multt').checked;
-  if(f1){
-    plus();
-  }else if(f2){
-    min ();
-  }else if(f3) {
-    mult();
-  }
+  if (check2(result, result2, getSign())){
+		alert ("result true");
+	}
+	else {
+		alert ("result false");
+	}
 }
